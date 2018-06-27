@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .auto-center{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+
+        .outer{
+            background: yellow;
+            height: 600px;
+            width: 600px;
+        }
+        .center{
+            background: salmon;
+            height: 300px;
+            width: 300px;
+        }
+        .inner{
+            background: greenyellow;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="outer auto-center">outer
+    <div class="center auto-center">center
+        <div class="inner auto-center">inner
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var outer = document.querySelector('.outer')
+    var center = document.querySelector('.center')
+    var inner = document.querySelector('.inner')
+
+
+    outer.addEventListener('click', function(){
+    	alert('outer is clicked')
+    })
+
+    inner.addEventListener('click', function(){
+	    alert('inner is clicked')
+    })
+</script>
+</body>
+</html>

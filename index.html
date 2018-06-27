@@ -9,5 +9,53 @@
     welcome to Mirror's site
 </h1>
 
+<button>click me</button>
+<button>click me</button>
+<button>click me</button>
+<button>click me</button>
+<button>click me</button>
+<script>
+	//    var _alert = function () {
+	//        alert('button is clicked')
+	//    }
+	//
+	//    var _console = function () {
+	//        console.log("button is clicked" );
+	//        document.querySelector('button').removeEventListener('click' , _console)
+	//    }
+	//    document.querySelector('button').addEventListener('click' , _alert )
+	//    document.querySelector('button').addEventListener('click' , _console )
+
+	function random(x) {
+		return Math.random() * x
+	}
+
+	function bgChange(e) {
+		var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+		e.target.style.backgroundColor = rndCol;
+		console.log(e);
+	}
+
+	var btns = document.querySelectorAll('button');
+
+
+	var num = 0;
+	for (let item of btns) {
+		item.addEventListener('click' , bgChange)
+	}
+
+
+
+    var arr = [1 ,4 ,5]
+    arr.name = '张三'
+
+    console.log( Object.keys(arr) )
+
+
+
+
+
+
+</script>
 </body>
 </html>
